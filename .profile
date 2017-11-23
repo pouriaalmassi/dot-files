@@ -1,21 +1,25 @@
 # alias
 
 ## environments
-alias python3='/usr/local/Cellar/python3/3.5.1/bin/python3'
+# alias python3='/usr/local/Cellar/python3/3.5.1/bin/python3'
 
 ## git
 alias g='git status'
+alias gg='git status'
+alias ggg='git status'
+alias gggg='git status'
 alias gs='git status'
 alias gb='git branch -v'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gl='git log -n $1'
 alias gsl='git stash list'
-alias gcd='git checkout developer'
+alias gcd='git checkout develop'
 alias gcm='git checkout master'
 alias gct='git checkout tmp'
 alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
+alias gp='git pull'
 
 ## ls
 alias la='ls -la'
