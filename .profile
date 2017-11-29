@@ -20,6 +20,8 @@ alias gct='git checkout tmp'
 alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
 alias gp='git pull'
+alias gdh='git diff HEAD~$1' # needs work
+
 
 ## ls
 alias la='ls -la'
