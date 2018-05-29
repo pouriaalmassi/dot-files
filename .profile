@@ -3,7 +3,6 @@
 ## environments
 # alias python3='/usr/local/Cellar/python3/3.5.1/bin/python3'
 
-## git
 alias g='git status'
 alias gg='git status'
 alias ggg='git status'
@@ -22,9 +21,6 @@ alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
 alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
-
-
-## ls
 alias la='ls -la'
 alias l='ls -l'
 alias ll='ls -l'
@@ -34,6 +30,10 @@ alias k='ls -l'
 alias kk='ls -l'
 alias kkk='ls -l'
 alias kkkk='ls -l'
+# git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy
+# git rev-parse --abbrev-ref HEAD | tr -d '\n' | grep'[0-9]' | pbcopy
+# _b_ranch cop_y_
+alias by='git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy'
 
 # exports
 export PATH="/usr/local/bin:$PATH":
@@ -56,3 +56,19 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # ruby stuff
 # source /usr/local/share/chruby/chruby.sh
+
+# Git branch in prompt.
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+
+
+
+
+
+
+
