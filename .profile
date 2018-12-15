@@ -2,17 +2,20 @@
 
 ## environments
 # alias python3='/usr/local/Cellar/python3/3.5.1/bin/python3'
+alias androidstudio='open -a /Applications/Android\ Studio.app'
 
+## git
 alias g='git status'
 alias gg='git status'
 alias ggg='git status'
 alias gggg='git status'
 alias gs='git status'
 alias gb='git branch -v'
+alias ggb='git branch -v'
 alias gba='git branch -a'
 alias gd='git diff'
 alias gds='git diff --staged'
-alias gl='git log -n $1'
+alias gl='git log --all --decorate --oneline --graph -n $1'
 alias gsl='git stash list'
 alias gcd='git checkout develop'
 alias gcm='git checkout master'
@@ -21,6 +24,8 @@ alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
 alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
+
+## ls
 alias la='ls -la'
 alias l='ls -l'
 alias ll='ls -l'
@@ -30,6 +35,7 @@ alias k='ls -l'
 alias kk='ls -l'
 alias kkk='ls -l'
 alias kkkk='ls -l'
+
 # git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy
 # git rev-parse --abbrev-ref HEAD | tr -d '\n' | grep'[0-9]' | pbcopy
 # _b_ranch cop_y_
@@ -57,6 +63,8 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # ruby stuff
 # source /usr/local/share/chruby/chruby.sh
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Git branch in prompt.
 
 parse_git_branch() {
@@ -64,11 +72,4 @@ parse_git_branch() {
 }
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-
-
-
-
-
-
 
