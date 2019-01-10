@@ -73,3 +73,10 @@ parse_git_branch() {
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+
+# Go development
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+# test -d "${GOPATH}" || mkdir "${GOPATH}"
+# test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
