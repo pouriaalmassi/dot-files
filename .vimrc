@@ -20,6 +20,7 @@ set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
+set list listchars+=space:·
 
 " Highlight searches
 set hlsearch
