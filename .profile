@@ -24,7 +24,7 @@ alias gcbt='git checkout -b tmp'
 alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
 #alias gl='git log --all --decorate --oneline --graph -n $1'
-alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %x09%x09 %Cgreen%d %Creset%s' --date=long -n $1"
+alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %x09%x09 %Cgreen%d %Creset%s' --date=short -n $1"
 
 ## ls
 alias la='ls -la'
