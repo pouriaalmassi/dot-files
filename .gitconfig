@@ -4,44 +4,31 @@
 [push]
 	default = current
 [core]
-	quotepath = false
-	excludesfile = /Users/pouriaalmassi/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
 	ui = true
-[format]
-	pretty = oneline
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
-[difftool "Kaleidoscope"]
-[diff]
-[difftool]
-[mergetool "Kaleidoscope"]
-	trustexitcode = true
-[mergetool]
-	prompt = false
-[merge]
-	tool = Kaleidoscope
-[credential]
-	helper = osxkeychain
-[alias]
-	undo = reset --soft HEAD^
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
+[mergetool]
+	prompt = false
 [diff]
 	tool = Kaleidoscope
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
