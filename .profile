@@ -26,6 +26,7 @@ alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
 alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %x09%x09 %Cgreen%d %Creset%s' --date=short -n $1"
 alias gitcontributors='git log --format="%ae" | sort | uniq -c'
+alias gpt='git push && git push --tags'
 
 ## ls
 alias la='ls -la'
