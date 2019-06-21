@@ -29,7 +29,7 @@ alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %C(cyan)%an %x09%x09 %C
 alias gitcontributors='git log --format="%ae" | sort | uniq -c'
 alias gpt='git push && git push --tags'
 # https://stackoverflow.com/a/6089415
-alias gpo="git push --set-upstream origin $(git branch | awk '/^\* / { print $2 }')"
+alias gpo="git push --set-upstream origin $(git branch | awk '/^\* / { print $2 }') >> /dev/null"
 
 ## ls
 alias la='ls -la'
