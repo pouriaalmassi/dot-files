@@ -15,7 +15,6 @@ alias ggb='git branch -v'
 alias gba='git branch -a'
 alias gd='git diff'
 alias gds='git diff --staged'
-alias gl='git log --all --decorate --oneline --graph -n $1'
 alias gsl='git stash list'
 alias gc='git checkout $1'
 alias gct='git checkout test'
@@ -30,6 +29,7 @@ alias gitcontributors='git log --format="%ae" | sort | uniq -c'
 alias gpt='git push && git push --tags'
 # https://stackoverflow.com/a/6089415
 alias gpo="git push --set-upstream origin $(git branch | awk '/^\* / { print $2 }') >> /dev/null"
+
 
 ## ls
 alias la='ls -la'
