@@ -20,7 +20,6 @@ set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
-" set list listchars+=space:·
 
 " Highlight searches
 set hlsearch
@@ -35,4 +34,4 @@ set incsearch
 set title
 
 " Wrap text width
-:set textwidth=240
+" :set textwidth=80

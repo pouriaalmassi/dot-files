@@ -16,20 +16,16 @@ alias gba='git branch -a'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gsl='git stash list'
-alias gc='git checkout $1'
-alias gct='git checkout test'
 alias gcd='git checkout develop'
 alias gcm='git checkout master'
+alias gct='git checkout tmp'
 alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
 alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
-alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %C(cyan)%an %x09%x09 %Cgreen%d %Creset%s' --date=iso -n $1"
-alias gitcontributors='git log --format="%ae" | sort | uniq -c'
-alias gpt='git push && git push --tags'
-# https://stackoverflow.com/a/6089415
-alias gpo="git push --set-upstream origin $(git branch | awk '/^\* / { print $2 }') >> /dev/null"
-
+# alias gl='git log --all --decorate --oneline --graph -n $1'
+# %x09 == tab char
+alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d %Creset%s' --date=short -n $1"
 
 ## ls
 alias la='ls -la'
@@ -68,6 +64,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # ruby
 # source /usr/local/share/chruby/chruby.sh
+# Allow gems to be writable by the non sudo user
+export GEM_HOME=~/.gems
+export PATH=$PATH:~/.gems/bin
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -78,3 +77,7 @@ parse_git_branch() {
 }
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# go
+# PATH="$GOPATH/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin/go
