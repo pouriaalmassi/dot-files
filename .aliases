@@ -17,6 +17,8 @@ alias gsgd='git stage . && git diff'
 alias gcbt='git checkout -b tmp'
 alias gp='git pull'
 alias gdh='git diff HEAD~$1' # needs work
+alias gm='git mergetool'
+alias grc='git rebase --continue'
 # alias gl='git log --all --decorate --oneline --graph -n $1'
 # %x09 == tab char
 alias gl="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%d %Creset%s' --date=short -n $1"
@@ -42,3 +44,10 @@ alias kkkk='ls -l'
 # git rev-parse --abbrev-ref HEAD | tr -d '\n' | grep'[0-9]' | pbcopy
 # _b_ranch cop_y_
 alias by='git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy'
+
+# golang
+alias gob='go build $1'
+alias gor='go run $1'
+
+# misc
+alias pi='pod install'
